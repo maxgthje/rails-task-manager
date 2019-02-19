@@ -1,0 +1,20 @@
+<h1><%= @task.title %></h1>
+
+<p>
+  <% if @task.completed == false %>
+      <%= "☐ This task is not yet completed..." %>
+    <% elsif @task.completed == true %>
+      <%= "✔ You have completed this task!" %>
+    <% end %>
+</p>
+
+<p>
+  <%= link_to "Edit this task", edit_task_path(@task) %>
+</p>
+
+<p>
+  <%= link_to "Back to the list", tasks_path(@tasks)  %>
+</p>
+
+
+
